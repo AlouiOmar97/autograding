@@ -4,7 +4,7 @@ const User = require("../models/user")
 // Création d'un utilisateur
 router.post('/', (req, res) => {
   // TODO: Implémenter la création d'un utilisateur
-  res.send("Création d'un utilisateur non implémentée");
+  // res.send("Création d'un utilisateur non implémentée");
   new User({
     name: req.body.name,
     email: req.body.email
@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
 // Lecture d'un utilisateur
 router.get('/:id', (req, res) => {
   // TODO: Implémenter la lecture d'un utilisateur
-  res.send("Lecture d'un utilisateur non implémentée");
+  // res.send("Lecture d'un utilisateur non implémentée");
   User.find({_id:req.params.id}).then(data => {
     res.status(200).json(data);
   })
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
 // Mise à jour d'un utilisateur
 router.put('/:id', (req, res) => {
   // TODO: Implémenter la mise à jour d'un utilisateur
-  res.send("Mise à jour d'un utilisateur non implémentée");
+  // res.send("Mise à jour d'un utilisateur non implémentée");
   User.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then(user => {
       if (!user) {
@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
 // Suppression d'un utilisateur
 router.delete('/:id', (req, res) => {
   // TODO: Implémenter la suppression d'un utilisateur
-  res.send("Suppression d'un utilisateur non implémentée");
+  // res.send("Suppression d'un utilisateur non implémentée");
   User.findByIdAndDelete(req.params.id)
     .then(user => {
       if (!user) {
